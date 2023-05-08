@@ -137,8 +137,7 @@ export const data: Fruit[] = [
 		title: 'Gooseberry',
 		headline:
 			'Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft.',
-		image:
-			'https://freepngimg.com/thumb/berries/137463-black-currant-berries-organic-free-download-image.png',
+		image: 'https://www.pngmart.com/files/Amla-PNG-Isolated-File.png',
 		gradientColors: ['#cececece', '#fa3e3e'],
 		description: `The gooseberry (American and northern British) or (southern British)), with scientific names Ribes uva-crispa (and syn. Ribes grossularia), is a species of Ribes (which also includes the currants).
       It is native to Europe, the Caucasus and northern Africa. The species is also sparingly naturalized in scattered locations in North America. Gooseberry bushes produce an edible fruit and are grown on both a commercial and domestic basis. Its native distribution is unclear, since it may have escaped from cultivation and become naturalized. For example, in Britain, some sources consider it to be a native,[4] others to be an introduction.

@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
 		alignItems: 'flex-start',
 	},
 	gradient: {
-		borderRadius: 5,
+		borderRadius: 7,
 		marginBottom: 10,
 		padding: 5,
 		marginHorizontal: 10,
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
 	image: {
 		width: 80,
 		height: 80,
-		resizeMode: 'cover',
+		resizeMode: 'contain',
 	},
 	textInfo: {
 		width: '70%',

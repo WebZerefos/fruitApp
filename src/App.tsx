@@ -30,6 +30,7 @@ const App = () => {
 				<Stack.Screen
 					name='Info'
 					component={Info}
+					options={{ headerShown: false }}
 				/>
 				<Stack.Screen
 					name='Details'
