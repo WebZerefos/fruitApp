@@ -24,7 +24,7 @@ const Home = ({ navigation }: HomeProps) => {
 					ListHeaderComponent={<HeaderTitle title='Fruits' />}
 					ItemSeparatorComponent={Separator}
 					renderItem={({ item }) => (
-						<Pressable>
+						<Pressable onPress={() => navigation.navigate('Info', { fruit: item })}>
 							<FruitCard fruit={item} />
 						</Pressable>
 					)}

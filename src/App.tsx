@@ -12,8 +12,8 @@ import Info from './screens/Info'
 
 export type RootStackParamList = {
 	Home: undefined
-	Info: { fuit: Fruit }
-	Details: { fuit: Fruit }
+	Info: { fruit: Fruit }
+	Details: { fruit: Fruit }
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>()

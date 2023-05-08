@@ -56,6 +56,15 @@ const styles = StyleSheet.create({
 		fontWeight: '700',
 		marginBottom: 5,
 		color: '#606060',
+		shadowColor: '#000',
+		shadowOffset: {
+			width: 0,
+			height: 1,
+		},
+		shadowOpacity: 0.18,
+		shadowRadius: 1.0,
+
+		elevation: 1,
 	},
 	headline: {
 		color: '#687387',
