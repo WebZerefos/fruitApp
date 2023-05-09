@@ -2,7 +2,7 @@ import { View, Text } from 'react-native'
 import React from 'react'
 
 // Navigation
-import { NavigationContainer } from '@react-navigation/native'
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 // Screens
@@ -16,11 +16,19 @@ export type RootStackParamList = {
 	Details: { fruit: Fruit }
 }
 
+const MyTheme = {
+	...DefaultTheme,
+	colors: {
+		...DefaultTheme.colors,
+		background: '#ffffff',
+	},
+}
+
 const Stack = createNativeStackNavigator<RootStackParamList>()
 
 const App = () => {
 	return (
-		<NavigationContainer>
+		<NavigationContainer theme={MyTheme}>
 			<Stack.Navigator initialRouteName='Home'>
 				<Stack.Screen
 					name='Home'
