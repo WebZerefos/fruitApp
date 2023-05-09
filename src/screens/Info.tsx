@@ -1,10 +1,13 @@
 import { Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
+import * as Animatable from 'react-native-animatable'
 
 // Navigation
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { RootStackParamList } from '../App'
 import LinearGradient from 'react-native-linear-gradient'
+
+import Icon from 'react-native-vector-icons/Feather'
 
 type InfoProps = NativeStackScreenProps<RootStackParamList, 'Info'>
 
@@ -18,7 +21,8 @@ const Info = ({ route, navigation }: InfoProps) => {
 					colors={fruit.gradientColors}
 					style={styles.gradient}
 				>
-					<Image
+					<Animatable.Image
+						animation='zoomIn'
 						source={{ uri: fruit.image }}
 						style={styles.image}
 					/>
@@ -35,7 +39,23 @@ const Info = ({ route, navigation }: InfoProps) => {
 						onPress={() => navigation.navigate('Details', { fruit: fruit })}
 						style={styles.startButton}
 					>
-						<Text style={styles.textButton}>Start</Text>
+						<Text style={styles.textButton}>
+							Start{' '}
+							<Icon
+								name='arrow-right-circle'
+								style={styles.icon}
+							/>
+						</Text>
+					</TouchableOpacity>
+
+					<TouchableOpacity
+						onPress={() => navigation.goBack()}
+						style={styles.backButton}
+					>
+						<Icon
+							name='arrow-left-circle'
+							style={styles.backIcon}
+						/>
 					</TouchableOpacity>
 				</LinearGradient>
 			</View>
@@ -57,6 +77,7 @@ const styles = StyleSheet.create({
 		marginHorizontal: 10,
 		alignItems: 'center',
 		borderRadius: 30,
+		position: 'relative',
 	},
 	image: {
 		width: '100%',
@@ -94,14 +115,28 @@ const styles = StyleSheet.create({
 	startButton: {
 		borderWidth: 1,
 		borderColor: '#ffffff',
-		paddingVertical: 15,
-		paddingHorizontal: '15%',
+		paddingVertical: 10,
 		borderRadius: 50,
 		marginTop: 15,
+		width: '40%',
+		alignItems: 'center',
+		justifyContent: 'center',
 	},
 	textButton: {
-		fontSize: 20,
+		fontSize: 25,
 		color: '#ffffff',
 		fontWeight: 'bold',
+	},
+	icon: {
+		fontSize: 25,
+	},
+	backButton: {
+		position: 'absolute',
+		left: 30,
+		top: 30,
+	},
+	backIcon: {
+		fontSize: 30,
+		color: '#ffffff',
 	},
 })

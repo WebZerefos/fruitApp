@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
 		borderRadius: 7,
 		marginBottom: 10,
 		padding: 5,
-		marginHorizontal: 10,
 	},
 	image: {
 		width: 80,
@@ -50,6 +49,7 @@ const styles = StyleSheet.create({
 	},
 	textInfo: {
 		width: '70%',
+		marginLeft: 10,
 	},
 	title: {
 		fontSize: 24,

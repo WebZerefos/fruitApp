@@ -19,6 +19,7 @@ const Home = ({ navigation }: HomeProps) => {
 		<SafeAreaView>
 			<View style={styles.container}>
 				<FlatList
+					showsVerticalScrollIndicator={false}
 					data={data}
 					keyExtractor={(item) => item.id}
 					ListHeaderComponent={<HeaderTitle title='Fruits' />}
@@ -37,5 +38,7 @@ const Home = ({ navigation }: HomeProps) => {
 export default Home
 
 const styles = StyleSheet.create({
-	container: {},
+	container: {
+		marginHorizontal: 10,
+	},
 })
